@@ -52,7 +52,9 @@
     "micromatch": "4.0.8",
     "dompurify": "3.2.4",
     "postcss": "8.4.31",
-    "form-data": "4.0.4"
+    "form-data": "4.0.4",
+    "glob": "11.1.0",
+    "brace-expansion": "2.0.2"
   },
   "license": "MIT"
 }
