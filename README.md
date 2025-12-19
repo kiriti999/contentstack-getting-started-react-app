@@ -27,15 +27,15 @@ This is a React starter app that integrates with Contentstack's Content Delivery
 4. Rename `.env.sample` as `.env` file in the root directory and add your Contentstack API keys:
 
    ```
-   REACT_APP_CONTENTSTACK_API_KEY=YOUR_STACK_API_KEY
-   REACT_APP_CONTENTSTACK_DELIVERY_TOKEN=YOUR_DELIVERY_TOKEN
-   REACT_APP_CONTENTSTACK_ENVIRONMENT=YOUR_ENVIRONMENT
-   REACT_APP_CONTENTSTACK_REGION=YOUR_STACK_REGION
+   VITE_CONTENTSTACK_API_KEY=YOUR_STACK_API_KEY
+   VITE_CONTENTSTACK_DELIVERY_TOKEN=YOUR_DELIVERY_TOKEN
+   VITE_CONTENTSTACK_ENVIRONMENT=YOUR_ENVIRONMENT
+   VITE_CONTENTSTACK_REGION=YOUR_STACK_REGION
    ```
 
 5. Run the development server:
    ```
-   npm start
+   npm run dev
    ```
 
 ## Configuration

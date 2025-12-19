@@ -2,11 +2,11 @@ import Contentstack from "contentstack";
 
 export const initializeContentstackSdk = () => {
   const {
-    REACT_APP_CONTENTSTACK_API_KEY,
-    REACT_APP_CONTENTSTACK_DELIVERY_TOKEN,
-    REACT_APP_CONTENTSTACK_ENVIRONMENT,
-    REACT_APP_CONTENTSTACK_REGION,
-  } = process.env;
+    VITE_CONTENTSTACK_API_KEY,
+    VITE_CONTENTSTACK_DELIVERY_TOKEN,
+    VITE_CONTENTSTACK_ENVIRONMENT,
+    VITE_CONTENTSTACK_REGION,
+  } = import.meta.env;
 
   const region: Contentstack.Region | undefined = (function (
     regionValue: string
@@ -25,19 +25,19 @@ export const initializeContentstackSdk = () => {
       default:
         return undefined;
     }
-  })(REACT_APP_CONTENTSTACK_REGION as string);
+  })(VITE_CONTENTSTACK_REGION as string);
 
   if (!region) {
     throw new Error(
-      "Invalid region provided in REACT_APP_CONTENTSTACK_REGION. Valid values are: " +
+      "Invalid region provided in VITE_CONTENTSTACK_REGION. Valid values are: " +
         Object.keys(Contentstack.Region).join(", ")
     );
   }
 
   const Stack = Contentstack.Stack({
-    api_key: REACT_APP_CONTENTSTACK_API_KEY as string,
-    delivery_token: REACT_APP_CONTENTSTACK_DELIVERY_TOKEN as string,
-    environment: REACT_APP_CONTENTSTACK_ENVIRONMENT as string,
+    api_key: VITE_CONTENTSTACK_API_KEY as string,
+    delivery_token: VITE_CONTENTSTACK_DELIVERY_TOKEN as string,
+    environment: VITE_CONTENTSTACK_ENVIRONMENT as string,
     region: region,
   });
   return Stack;
