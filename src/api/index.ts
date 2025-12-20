@@ -30,7 +30,8 @@ export const getEntry = (contentType: string) => {
     .then((entry) => {
       return entry;
     })
-    .catch((err: any) => {
+    .catch((error: unknown) => {
+      console.error(error);
       return {};
     });
 };

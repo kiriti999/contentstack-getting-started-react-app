@@ -1,14 +1,9 @@
-import React, { useEffect, useMemo, useState } from "react";
-import MenuCard from "./MenuCard";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
-import { LoadingSkeleton } from "../LoadingSkeleton";
 // COMMENT: Uncomment below 2 import statements
 
 // import { TMenu, TDishes } from "../../types";
 // import { fetchMenuPageData } from "../../api";
 
-const Menu: React.FC = () => {
+const Menu = () => {
   // COMMENT: Uncomment from line 14 to 96
 
   // const dispatch = useDispatch();
