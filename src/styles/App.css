@@ -99,6 +99,7 @@
     font-size: 144px;
     font-weight: 500;
     line-height: 144px;
+
     .italic {
       font-style: italic;
       font-weight: 100;
@@ -165,7 +166,8 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 18px; /* Optional: Add some padding around the container */
+    padding: 18px;
+    /* Optional: Add some padding around the container */
     box-sizing: border-box;
   }
 
@@ -455,7 +457,8 @@
     display: flex;
     background-color: transparent;
     width: 100%;
-    padding: 20px; /* Optional: Add some padding around the container */
+    padding: 20px;
+    /* Optional: Add some padding around the container */
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 8px;
@@ -476,9 +479,11 @@
     .menu-card-item {
       flex-basis: calc(50% - 20px);
     }
+
     .category p {
       flex: 1 1 calc(50% - 40px);
     }
+
     .hero-content {
       margin: 96px;
     }
@@ -554,6 +559,7 @@
       line-height: 24px;
       text-align: center;
     }
+
     .cta-button {
       margin: auto;
       font-size: 16px;
@@ -565,6 +571,7 @@
       font-size: 64px;
       font-weight: 400;
       line-height: 80px;
+
       .italic {
         font-size: 64px;
         font-weight: 400;
@@ -606,16 +613,19 @@
     }
 
     .menu-card-item {
-      flex-basis: 100%; /* 1 item per row */
+      flex-basis: 100%;
+      /* 1 item per row */
       margin: 28px;
     }
 
     .category p {
-      flex: 1 1 100%; /* 1 item per row on small screens */
+      flex: 1 1 100%;
+      /* 1 item per row on small screens */
     }
 
     .logo-menu img {
-      width: 160px; /* Adjust width for tablets */
+      width: 160px;
+      /* Adjust width for tablets */
     }
   }
 }
