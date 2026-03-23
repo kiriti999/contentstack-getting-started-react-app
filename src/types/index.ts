@@ -51,6 +51,15 @@ export type TLink = {
   title: string;
 };
 
+export type TPdfData = {
+  title: string;
+  file?: {
+    url: string;
+    filename: string;
+    content_type: string;
+  };
+};
+
 // COMMENT: Uncomment below lines
 
 // export type TDishes = {

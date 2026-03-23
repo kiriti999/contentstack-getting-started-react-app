@@ -8,11 +8,16 @@ const Home: React.FC = () => {
   const homePageData = useSelector(
     (state: RootState) => state.main.homePageData
   );
+  const pdfData = useSelector((state: RootState) => state.main.pdfData);
   const navigate = useNavigate();
 
   const memoizedHomePageData = useMemo(() => homePageData, [homePageData]);
 
-  const { home } = memoizedHomePageData.sections[0];
+  const home = memoizedHomePageData?.sections?.[0]?.home;
+
+  if (!home) {
+    return <div className="home-page">Loading...</div>;
+  }
 
   const styleAlternateWords = (text: string) => {
     return text
@@ -52,6 +57,19 @@ const Home: React.FC = () => {
           </Button>
         </div>
       </div>
+
+      {pdfData?.file?.url && (
+        <div className="pdf-section">
+          <h2>{pdfData.title}</h2>
+          <iframe
+            src={pdfData.file.url}
+            width="100%"
+            height="600px"
+            title={pdfData.title || "PDF Document"}
+            style={{ border: "none" }}
+          />
+        </div>
+      )}
     </div>
   );
 };

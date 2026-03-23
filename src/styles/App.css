@@ -135,6 +135,19 @@
     background-color: #241d32;
   }
 
+  .pdf-section {
+    padding: 48px 64px;
+    text-align: center;
+  }
+
+  .pdf-section h2 {
+    color: #241d32;
+    font-family: "Cormorant Garamond";
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
   .menu-page {
     background-color: #fbf8f4;
     width: 100%;

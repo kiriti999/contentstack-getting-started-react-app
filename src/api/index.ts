@@ -4,6 +4,7 @@ import {
   setFooterData,
   setHeaderData,
   setHomePageData,
+  setPdfData,
   // COMMENT: Uncomment below line
   // setMenuPageData,
 } from "../reducer";
@@ -79,6 +80,15 @@ export const fetchFooterData = async (
   dispatch(setFooterData(data[0][0]));
 };
 
+export const fetchPdfData = async (
+  dispatch: Dispatch<any>
+): Promise<void> => {
+  const data = await getEntry(CONTENT_TYPES.PDF);
+  if (data[0]?.[0]) {
+    dispatch(setPdfData(data[0][0]));
+  }
+};
+
 export const fetchHomePageData = async (
   dispatch: Dispatch<any>
 ): Promise<void> => {
@@ -100,6 +110,7 @@ export const fetchInitialData = async (
       fetchHeaderData(dispatch),
       fetchFooterData(dispatch),
       fetchHomePageData(dispatch),
+      fetchPdfData(dispatch),
     ]);
     setLoading(false);
   } catch (error) {

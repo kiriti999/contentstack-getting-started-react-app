@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // COMMENT: Add TMenu in below import statement
-import { TFooterData, THeaderData, THomePageData } from "../types";
+import { TFooterData, THeaderData, THomePageData, TPdfData } from "../types";
 
 interface AppState {
   headerData: THeaderData;
   footerData: TFooterData;
   homePageData: THomePageData;
+  pdfData: TPdfData | null;
   // COMMENT: Uncomment below line
   // menuPageData: TMenu[];
 }
@@ -62,6 +63,7 @@ const initialState: AppState = {
       },
     ],
   },
+  pdfData: null,
   // COMMENT: Uncomment below lines
   // menuPageData: [
   //   {
@@ -94,6 +96,9 @@ const mainSlice = createSlice({
     setHomePageData: (state, action: PayloadAction<THomePageData>) => {
       state.homePageData = action.payload;
     },
+    setPdfData: (state, action: PayloadAction<TPdfData>) => {
+      state.pdfData = action.payload;
+    },
     // COMMENT: Uncomment below lines
     // setMenuPageData: (state, action: PayloadAction<TMenu[]>) => {
     //   state.menuPageData = action.payload;
@@ -105,6 +110,7 @@ export const {
   setHeaderData,
   setFooterData,
   setHomePageData,
+  setPdfData,
   // COMMENT: Uncomment below line
   // setMenuPageData,
 } = mainSlice.actions;
